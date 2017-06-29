@@ -1,10 +1,12 @@
-import getActionPrefix from './getActionPrefix';
+const resolveAction = (action, response, options, result) => {
 
-const resolveRequestAction = (action, response, result) => {
+  const nextState = (result) ? options.success : options.error;
+  const actionPrefix = action.type.replace(options.request, '');
+
   return {
-    type: `${getActionPrefix(action.type)}_${result}`,
+    type: `${actionPrefix}${nextState}`, 
     payload: response
   };
 };
 
-export default resolveRequestAction;
+export { resolveAction };
