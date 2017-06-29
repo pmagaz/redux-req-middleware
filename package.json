@@ -1,6 +1,6 @@
 {
   "name": "redux-req-middleware",
-  "version": "0.9.6",
+  "version": "0.9.8",
   "description": "Redux Store Middleware to handle request actions",
   "author": {
     "name": "Pablo Magaz",
@@ -8,10 +8,12 @@
   },
   "main": "lib/index.js",
   "scripts": {
+    "clean": "rimraf lib coverage",
     "build": "babel src --out-dir lib",
-    "test": "mocha  --compilers js:babel-core/register \"./spec/**/*.spec.js\"",
     "test:coverage": "nyc npm test && nyc report --reporter=lcov",
-    "lint": "node node_modules/eslint/bin/eslint.js src --ext .js"
+    "lint": "node node_modules/eslint/bin/eslint.js src --ext .js",
+    "test": "mocha  --compilers js:babel-core/register \"./spec/**/*.spec.js\"",
+    "prepublish": "npm run lint && npm run test:coverage && npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
