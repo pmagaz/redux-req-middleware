@@ -1,7 +1,11 @@
 {
   "name": "redux-req-middleware",
-  "version": "0.9.4",
+  "version": "0.9.6",
   "description": "Redux Store Middleware to handle request actions",
+  "author": {
+    "name": "Pablo Magaz",
+    "email": "magazpablo@gmail.com"
+  },
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -22,7 +26,6 @@
     "handler",
     "async actions"
   ],
-  "author": "Pablo Magaz",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pmagaz/redux-req-middleware/issues"
