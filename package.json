@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "test": "mocha  --compilers js:babel-core/register \"./**/*.spec.js\""
+    "test": "mocha  --compilers js:babel-core/register \"./**/*.spec.js\"",
+    "lint": "node node_modules/eslint/bin/eslint.js src --ext .js"
   },
   "repository": {
     "type": "git",
