@@ -1,7 +1,7 @@
 import { expect, should } from 'chai';
 import { createStore, compose, applyMiddleware } from 'redux';
 
-import reduxReqMiddleware from '../src/middleware';
+import { reduxReqMiddleware } from '../src/middleware';
 
 
 describe('middleware', () => {

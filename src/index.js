@@ -1,1 +1,3 @@
-export { middleware } from './middleware';
+import { reduxReqMiddleware } from './middleware';
+
+export default reduxReqMiddleware; 

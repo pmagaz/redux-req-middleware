@@ -26,4 +26,4 @@ const reduxReqMiddleware = (config) => {
 
 };
 
-export default reduxReqMiddleware;
+export { reduxReqMiddleware };
