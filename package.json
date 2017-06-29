@@ -1,11 +1,12 @@
 {
   "name": "redux-req-middleware",
-  "version": "0.9.1",
+  "version": "0.9.4",
   "description": "Redux Store Middleware to handle request actions",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "test": "mocha  --compilers js:babel-core/register \"./**/*.spec.js\"",
+    "test": "mocha  --compilers js:babel-core/register \"./spec/**/*.spec.js\"",
+    "test:coverage": "nyc npm test && nyc report --reporter=lcov",
     "lint": "node node_modules/eslint/bin/eslint.js src --ext .js"
   },
   "repository": {
@@ -18,7 +19,8 @@
     "middlware",
     "action",
     "request",
-    "handler"
+    "handler",
+    "async actions"
   ],
   "author": "Pablo Magaz",
   "license": "MIT",
@@ -32,10 +34,22 @@
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "chai": "^4.0.2",
+    "coveralls": "^2.13.1",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-babel": "^4.1.1",
     "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "redux": "^3.7.1",
+    "redux-api-middleware": "^1.0.3",
     "rimraf": "^2.6.1"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "extension": [
+      "js"
+    ]
   }
 }
