@@ -1,0 +1,27 @@
+{
+  "name": "redux-req-middleware",
+  "version": "0.9.1",
+  "description": "Redux Store Middlware to handle request actions",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmagaz/redux-req-middleware.git"
+  },
+  "keywords": [
+    "redux",
+    "store",
+    "middlware",
+    "action",
+    "request",
+    "handler"
+  ],
+  "author": "Pablo Magaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmagaz/redux-req-middleware/issues"
+  },
+  "homepage": "https://github.com/pmagaz/redux-req-middleware#readme"
+}
