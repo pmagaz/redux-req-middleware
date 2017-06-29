@@ -5,7 +5,7 @@ redux-req-middleware
 ## Table of contents
 
 1. [Introduction](#introduction)
-2. [Example](#Example)
+2. [Example](#example)
 3. [Installation](#installation)
 4. [Configuration](#configuration)
 5. [Usage](#usage)
