@@ -1,16 +1,29 @@
-import resolveRequestAction from '../shared/ResolveRequestAction';
+import { resolveAction } from './resolveAction';
+import { defaultConfig } from './defaultConfig';
+import { RequestParamError } from './errors';
 
-const requestMiddleware = store => next => action => {
-  const { request, type, ...rest } = action;
+const reduxReqMiddleware = (config) => {
 
-  if (!request) return next(action);
+  const options = config || defaultConfig;
+  
+  const middleware = store => next => action => {
+    
+    const dispatch = store.dispatch;
+    const { request, type, ...rest } = action;
+    
+    if (!request) return next(action);
+    else if (!request.then) throw new RequestParamError(action.type);
 
-  store.dispatch({ type, ...rest });
+    next({ type, ...rest });
 
-  return request.then(
-    res => store.dispatch(resolveRequestAction(action, res, 'SUCCESS')),
-    err => store.dispatch(resolveRequestAction(action, err, 'ERROR'))
-  );
+    return request.then(
+      (res) => (dispatch(resolveAction(action, res, options, true))),
+      (err) => (dispatch(resolveAction(action, err, options, false)))
+    );
+  };
+  
+  return middleware;
+
 };
 
-export default requestMiddleware;
+export default reduxReqMiddleware;
