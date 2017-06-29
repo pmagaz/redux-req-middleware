@@ -1,10 +1,11 @@
 {
   "name": "redux-req-middleware",
   "version": "0.9.1",
-  "description": "Redux Store Middlware to handle request actions",
-  "main": "src/index.js",
+  "description": "Redux Store Middleware to handle request actions",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "build": "babel src --out-dir lib",
+    "test": "mocha  --compilers js:babel-core/register \"./**/*.spec.js\""
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,17 @@
   "bugs": {
     "url": "https://github.com/pmagaz/redux-req-middleware/issues"
   },
-  "homepage": "https://github.com/pmagaz/redux-req-middleware#readme"
+  "homepage": "https://github.com/pmagaz/redux-req-middleware#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "chai": "^4.0.2",
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "mocha": "^3.4.2",
+    "rimraf": "^2.6.1"
+  }
 }
