@@ -28,6 +28,7 @@ module.exports = {
     "no-console": 0,
     "no-alert": 0,
     "semi": 2,
+    "eol-last": 0,
     "no-trailing-spaces": 0,
     "padded-blocks": 0,
     "no-var": 2,
