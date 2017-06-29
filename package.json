@@ -1,6 +1,6 @@
 {
   "name": "redux-req-middleware",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Redux Store Middleware to handle request actions",
   "author": {
     "name": "Pablo Magaz",
