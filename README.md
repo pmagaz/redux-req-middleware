@@ -15,7 +15,7 @@ redux-req-middleware
 
 `redux-req-middleware` is a Redux Store middleware to handle Redux actions with a http request attached.
 
-### Example
+## Example
 
 #### api.js
 
