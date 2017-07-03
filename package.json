@@ -1,11 +1,16 @@
 {
   "name": "redux-req-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redux Store Middleware to handle action request",
   "author": {
     "name": "Pablo Magaz",
     "email": "magazpablo@gmail.com"
   },
+  "contributors": [
+   {
+      "name": "Gastón Messeri",
+      "email": "gastonmesseri@gmail.com"
+  }],
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib coverage",
@@ -22,11 +27,13 @@
   "keywords": [
     "redux",
     "store",
-    "middlware",
+    "middleware",
     "action",
     "request",
     "handler",
-    "async actions"
+    "async",
+    "async actions",
+    "chain actions"
   ],
   "license": "MIT",
   "bugs": {

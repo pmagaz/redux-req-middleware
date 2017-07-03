@@ -4,8 +4,8 @@ import { RequestParamError } from './errors';
 
 const reduxReqMiddleware = (config) => {
 
-  const options = config || defaultConfig;
-  
+  const options = { ...defaultConfig, ...(config || {}) };
+
   const middleware = store => next => action => {
     
     const dispatch = store.dispatch;

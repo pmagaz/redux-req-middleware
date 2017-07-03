@@ -1,3 +1,10 @@
+1.0.1 / 2017-07-03
+==================
+
+* Add merge default configuration 
+* Improve tests
+* Update README 
+
 1.0.0 / 2017-06-31
 ==================
 
