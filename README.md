@@ -99,9 +99,7 @@ const store = createStore(
 
 ## USAGE
 
- Request Actions handled by `redux-req-middleware` will dispatch return a promise giving to you the ability to chain actions.
-
- Actions with request param handled by `redux-req-middleware` will dispatch a new action with a SUCCESS or ERROR but also it will return a promise givin to you the ability to chain other a ctions.
+ Request Actions (actions with request params) handled by `redux-req-middleware` will dispatch a new action with a SUCCESS or ERROR but also it will return a promise, givin to you the ability to chain actions:
 
 ```javascript
 import api from '../api';
@@ -114,7 +112,7 @@ export function getPosts(params) {
 }
 ```
 
-Then, in your reducer you can catch the action "USERS_SUCCESS", return a new state and continue with the regular Redux flow or you can get the returned promise with the resolved action: 
+Then, in your reducer you can catch the action "USERS_SUCCESS", return a new state and continue with the regular Redux flow or you can get the returned promise with the resolved action returned by the middleware:
 
 ```javascript
 
