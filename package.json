@@ -33,7 +33,8 @@
     "handler",
     "async",
     "async actions",
-    "chain actions"
+    "chain actions",
+    "request action"
   ],
   "license": "MIT",
   "bugs": {
