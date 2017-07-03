@@ -1,2 +1,7 @@
 src
 spec
+coverage
+.babelrc
+.eslintrc.js
+.nyc_output
+.travis.yml
