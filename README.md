@@ -20,7 +20,7 @@ redux-req-middleware
 You can install `redux-req-middleware` via npm. If you'll use it in a Isomorphic/Universal App i recommend installing the library as production dependency.
 
 ```
-$ npm install redux-api-middleware --save
+$ npm install redux-req-middleware --save
 ```
 
 ## Example
