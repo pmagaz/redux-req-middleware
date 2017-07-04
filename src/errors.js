@@ -1,4 +1,5 @@
 class RequestParamError extends Error {
+  /* istanbul ignore next */
   constructor(name) {
     super();
     this.name = 'RequestParamError';
