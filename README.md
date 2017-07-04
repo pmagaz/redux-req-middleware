@@ -7,6 +7,8 @@
 
 `redux-req-middleware` is a Redux store middleware for fetching data using HTTP action request.
 
+## Table of contents
+
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Configuration](#configuration)
