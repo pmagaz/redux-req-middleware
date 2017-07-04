@@ -8,3 +8,4 @@ coverage
 .appveyor.yml
 .nycrc
 *.swp
+*.log
