@@ -127,3 +127,7 @@ Then, in your reducer you can catch the action "USERS_SUCCESS", return a new sta
 ## License
 
 MIT
+
+## Projects using redux-req-middleware
+
+- [react-base](https://github.com/atSistemas/react-base/ (atSistemas React/Redux Isomorphic Platform)
