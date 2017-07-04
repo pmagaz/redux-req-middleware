@@ -1,5 +1,9 @@
-redux-req-middleware
-====================
+# redux-req-middleware
+
+![Build-Status](https://travis-ci.org/pmagaz/redux-req-middleware.svg?branch=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/wane4ixtguv7qpaa?svg=true)](https://ci.appveyor.com/project/pmagaz/redux-req-middleware)
+[![Coverage Status](https://coveralls.io/repos/github/pmagaz/redux-req-middleware/badge.svg?branch=master)](https://coveralls.io/github/pmagaz/redux-req-middleware?branch=master)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 `redux-req-middleware` is a Redux store middleware for fetching data using HTTP action request.
 
@@ -94,10 +98,10 @@ import reduxReqMiddleware from 'redux-req-middleware';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 //default configuration
-const ReduxReqMiddlware = reduxReqMiddleware();
+const ReduxReqMiddleware = reduxReqMiddleware();
 
 //custom configuration
-const ReduxReqMiddlware = reduxReqMiddleware({
+const ReduxReqMiddleware = reduxReqMiddleware({
   request: '_CALL',
   success: '_OK',
   error: '_KO'
@@ -106,7 +110,7 @@ const ReduxReqMiddlware = reduxReqMiddleware({
 const store = createStore(
   rootReducer,
   compose(
-    applyMiddleware(reduxReqMiddleware())
+    applyMiddleware(ReduxReqMiddleware)
   )
 )
 
