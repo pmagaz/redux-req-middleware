@@ -19,6 +19,7 @@
     "test:coverage": "nyc npm test && nyc report --reporter=lcov",
     "lint": "node node_modules/eslint/bin/eslint.js src --ext .js",
     "test": "mocha  --compilers js:babel-core/register \"./spec/**/*.spec.js\"",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "prepublish": "npm run lint && npm run test:coverage && npm run clean && npm run build"
   },
   "repository": {
