@@ -1,9 +1,10 @@
-1.0.4 / 2017-08-03
+1.0.4 / 2017-07-04
 ==================
 
 * Update README 
+* Add travis, appveyour and coveralls 
 
-1.0.2 / 2017-08-03
+1.0.2 / 2017-07-03
 ==================
 
 * Update README 
