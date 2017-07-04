@@ -63,7 +63,7 @@ redux-req-middleware also returns a promise with the resolved action, givin you 
 
 ```javascript
 
-  store.dispatch(actions.getPosts(numPosts))
+  store.dispatch(actions.getUserList())
   .then(action => {
     //Resolved action of type 'USERS_SUCCESS'
     //and the response in the payload
