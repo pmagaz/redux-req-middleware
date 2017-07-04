@@ -59,7 +59,7 @@ function usersReducer(state = initialState, action) {
 ```
 
 
-redux-req-middleware also returns a promise with the resolved action, givin you the ability to chain actions:
+redux-req-middleware also returns a promise with the resolved action, giving you the ability to chain actions:
 
 ```javascript
 
