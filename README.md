@@ -1,18 +1,6 @@
 redux-req-middleware
 ====================
 
-
-## Table of contents
-
-1. [Introduction](#introduction)
-3. [Installation](#installation)
-2. [Example](#example)
-4. [Configuration](#configuration)
-5. [Usage](#usage)
-6. [License](License)
-
-## Introduction
-
 `redux-req-middleware` is a Redux store middleware for fetching data using HTTP action request and chain actions.
 
 ## Installation
@@ -23,7 +11,7 @@ You can install `redux-req-middleware` via npm. If you'll use it in a Isomorphic
 $ npm install redux-req-middleware --save
 ```
 
-## Example
+## Usage
 
 In this example we define the typicall Api call using fetch:
 
@@ -51,9 +39,18 @@ export function getPosts(params) {
   };
 }
 ```
-`redux-req-middleware` will resolve the request function and will dispatch a new action with a '_SUCCESS' suffix if the request was successful or '_ERROR' suffix if it was unsuccessful. Both the sucess and the error data returned will be added to the payload of the new action
+`redux-req-middleware` will resolve the request function and will dispatch a new action with a '_SUCCESS' suffix if the request was successful or '_ERROR' suffix if it was unsuccessful. Both the sucess and the error data returned will be added to the payload of the new action dispatched.
 
-The middleware will also return a promise giving to you the ability to chain actions. See [Usage](#usage)
+Then, in your reducer you can catch the action "USERS_SUCCESS", return a new state and continue with the regular Redux flow or you can get the returned promise with the resolved action returned by the middleware:
+
+```javascript
+
+  store.dispatch(actions.getPosts(numPosts))
+  .then(action => {
+    //Resolved action of type 'USERS_SUCCESS'
+    //and the response in the payload
+  })
+```
 
 
 ## Configuration
@@ -95,32 +92,6 @@ const store = createStore(
   )
 )
 
-```
-
-## USAGE
-
- Request Actions (actions with request params) handled by `redux-req-middleware` will dispatch a new action with a SUCCESS or ERROR but also it will return a promise, givin to you the ability to chain actions:
-
-```javascript
-import api from '../api';
-
-export function getPosts(params) {
-  return {
-    type: 'USERS_REQUEST',
-    request: api.fetchUsers(params)
-  };
-}
-```
-
-Then, in your reducer you can catch the action "USERS_SUCCESS", return a new state and continue with the regular Redux flow or you can get the returned promise with the resolved action returned by the middleware:
-
-```javascript
-
-  store.dispatch(actions.getPosts(numPosts))
-  .then(action => {
-    //Resolved action of type 'USERS_SUCCESS'
-    //and the response in the payload
-  })
 ``` 
 
 
