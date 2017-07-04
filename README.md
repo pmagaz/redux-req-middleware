@@ -5,7 +5,7 @@ redux-req-middleware
 
 ## Installation
 
-You can install `redux-req-middleware` via npm. If you'll use it in a Isomorphic/Universal App i recommend installing the library as production dependency.
+You can install `redux-req-middleware` via npm. If you'll use it in a Isomorphic/Universal App i recommend you installing it as production dependency.
 
 ```
 $ npm install redux-req-middleware --save
@@ -39,9 +39,23 @@ export function getPosts(params) {
   };
 }
 ```
-`redux-req-middleware` will resolve the request function and will dispatch a new action with a '_SUCCESS' suffix if the request was successful or '_ERROR' suffix if it was unsuccessful. Both the sucess and the error data returned will be added to the payload of the new action dispatched.
+Request Actions handled by redux-req-middleware will dispatch a new action with a '_SUCCESS' suffix if the request was successful or '_ERROR' suffix if it was unsuccessful. Both the sucess and the error data returned will be added to the payload of the new action dispatched.
 
-Then, in your reducer you can catch the action "USERS_SUCCESS", return a new state and continue with the regular Redux flow or you can get the returned promise with the resolved action returned by the middleware:
+Then, in your reducer you can catch the action "USERS_SUCCESS", return the regular Redux flow
+
+```javascript
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'USERS_SUCCESS':
+      return { ...state, numUsers: action.numUsers };
+  }
+    ...
+}
+```
+
+
+redux-req-middleware also returns a promise with the resolved action, givin you the ability to chain actions:
 
 ```javascript
 
