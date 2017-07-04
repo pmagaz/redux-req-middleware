@@ -5,3 +5,6 @@ coverage
 .eslintrc.js
 .nyc_output
 .travis.yml
+.appveyor.yml
+.nycrc
+*.swp
