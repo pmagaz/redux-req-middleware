@@ -1,7 +1,11 @@
 redux-req-middleware
 ====================
 
-`redux-req-middleware` is a Redux store middleware for fetching data using HTTP action request and chain actions.
+`redux-req-middleware` is a Redux store middleware for fetching data using HTTP action request.
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Configuration](#configuration)
 
 ## Installation
 
@@ -32,7 +36,7 @@ Then, in your Redux action creators you can add your Api call function usign the
 ```javascript
 import api from '../api';
 
-export function getPosts(params) {
+export function getUserList(params) {
   return {
     type: 'USERS_REQUEST',
     request: api.fetchUsers(params)
@@ -45,7 +49,7 @@ Then, in your reducer you can catch the action "USERS_SUCCESS", return the regul
 
 ```javascript
 
-function reducer(state = initialState, action) {
+function usersReducer(state = initialState, action) {
   switch (action.type) {
     case 'USERS_SUCCESS':
       return { ...state, numUsers: action.numUsers };
@@ -108,11 +112,11 @@ const store = createStore(
 
 ``` 
 
+## Projects using redux-req-middleware
+
+- [react-base](https://github.com/atSistemas/react-base/ (atSistemas React/Redux Isomorphic Platform)
+
 
 ## License
 
 MIT
-
-## Projects using redux-req-middleware
-
-- [react-base](https://github.com/atSistemas/react-base/ (atSistemas React/Redux Isomorphic Platform)
